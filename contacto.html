@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Mi Sitio Web</title>
+    <!-- Vinculamos el mismo CSS para mantener el estilo bonito -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- 1. Encabezado / Navegación -->
+    <header>
+        <nav>
+            <h2>TridenteTech</h2>
+            <ul>
+                <!-- Para volver a la página principal desde contacto.html -->
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="index.html#proyecto">Proyecto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. Formulario de Contacto -->
+    <main class="contacto-container">
+        <section id="contacto">
+            <h2>Ponte en Contacto</h2>
+            <p>¿Tienes dudas sobre nuestro proyecto o quieres colaborar? Envíanos un mensaje.</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/xljgnrnn" method="POST">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                <input type="text" name="asunto" placeholder="Asunto" required>
+                <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 3. Pie de página -->
+    <footer>
+        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
