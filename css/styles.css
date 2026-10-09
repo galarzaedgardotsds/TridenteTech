@@ -322,3 +322,32 @@ footer {
     color: #94a3b8;
     line-height: 1.5;
 }
+
+/* ==========================================
+   ADAPTACIÓN PARA PANTALLAS PEQUEÑAS (MÓVILES)
+   ========================================== */
+@media (max-width: 768px) {
+    /* Ajuste de la navegación */
+    header nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    /* Reducción de tamaños de texto en móviles */
+    .about-container h2,
+    .contacto-container h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Las tarjetas se apilan una debajo de otra */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
