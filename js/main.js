@@ -43,5 +43,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 3. Animación suave de entrada al hacer scroll (Fade-in on scroll)
+    const revealElements = document.querySelectorAll('.team-card, .skill-card, .project-card, .tech-stack-strip');
+    
+    if ('IntersectionObserver' in window && revealElements.length > 0) {
+        revealElements.forEach((el) => el.classList.add('reveal-on-scroll'));
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    obs.unobserve(entry.target); // Solo anima la primera vez que aparece
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach((el) => observer.observe(el));
+    }
 });
 

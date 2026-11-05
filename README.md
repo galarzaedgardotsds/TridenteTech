@@ -50,8 +50,8 @@ Sitio web oficial y portafolio del equipo **TridenteTech**, desarrollado como pr
 ### 6. Portafolio de Proyectos
 - Diseñamos la grilla de proyectos clasificando el estado de cada uno:
   - **01. Website TridenteTech** (*Completado*): La propia plataforma web que estamos presentando.
-  - **02. Organizador de Tareas para el Instituto** (*Próximo Proyecto / En Planificación*): Idea de sistema simulado para ayudar a estudiantes a ordenar exámenes y entregas con fechas y prioridades. Creamos `proyecto.html` para explicar cómo lo pensamos desarrollar a futuro.
-  - **03. Módulos y Algoritmos en C** (*Base del Curso*): Ejercicios y prácticas de lógica algorítmica, funciones y estructuras aprendidas en clase.
+  - **02. Edgar Finanzas PRO 💎** (*Proyecto Piloto / PWA*): Aplicación web progresiva orientada a dispositivos móviles para finanzas personales y grupales (gastos en cuotas, presupuestos, modo offline y división de gastos).
+  - **03. Organizador de Tareas para el Instituto** (*Próximo Proyecto / En Planificación*): Idea de sistema simulado para ayudar a estudiantes a ordenar exámenes y entregas con fechas y prioridades. Creamos `proyecto.html` para explicar cómo lo pensamos desarrollar a futuro.
 
 ### 7. Formulario de Contacto Activo
 - Creamos `contacto.html` con un formulario real conectado a la plataforma **Formspree** para que cualquier usuario o potencial cliente pueda enviar un mensaje y llegue directamente al correo del equipo.
