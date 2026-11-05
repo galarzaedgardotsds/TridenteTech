@@ -3,46 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | Mi Sitio Web</title>
-    <!-- Vinculamos el mismo CSS para mantener el estilo bonito -->
+    <meta name="description" content="Contáctate con el equipo TridenteTech (Edgar Galarza, Agustin Sattler, Luciano Ifran).">
+    <title>Contacto | TridenteTech</title>
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15 8 9 8 12 2'/%3E%3Cpath d='M6 6l2 6h8l2-6'/%3E%3Cpath d='M12 14v8'/%3E%3C/svg%3E">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="page-contacto">
 
-    <!-- 1. Encabezado / Navegación -->
+    <!-- 1. Encabezado y Navegación -->
     <header>
         <nav>
-            <h2>TridenteTech</h2>
+            <a href="index.html#inicio" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="12 2 15 8 9 8 12 2"/>
+                    <path d="M6 6l2 6h8l2-6"/>
+                    <path d="M12 14v8"/>
+                </svg>
+                <span>TridenteTech</span>
+            </a>
             <ul>
-                <!-- Para volver a la página principal desde contacto.html -->
-                <li><a href="index.html#inicio">Inicio</a></li>
-                <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="index.html#proyecto">Proyecto</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#equipo" class="nav-link">Equipo</a></li>
+                <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="index.html#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 2. Formulario de Contacto -->
+    <!-- 2. Formulario de Contacto Accesible -->
     <main class="contacto-container">
         <section id="contacto">
-            <h2>Ponte en Contacto</h2>
-            <p>¿Tienes dudas sobre nuestro proyecto o quieres colaborar? Envíanos un mensaje.</p>
+            <h2>Ponte en Contacto con TridenteTech</h2>
+            <p>¿Tienes dudas sobre nuestros proyectos del curso o comentarios para el equipo? Envíanos un mensaje.</p>
             
             <form class="contact-form" action="https://formspree.io/f/xljgnrnn" method="POST">
-                <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-                <input type="text" name="asunto" placeholder="Asunto" required>
-                <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
-                <button type="submit">Enviar Mensaje</button>
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Profesor / Compañero" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu consulta o sugerencia" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar Mensaje</button>
             </form>
         </section>
     </main>
 
     <!-- 3. Pie de página -->
     <footer>
-        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p><strong>TridenteTech</strong> &copy; 2026. Desarrollado por Edgar Galarza, Agustin Sattler y Luciano Ifran.</p>
     </footer>
 
+    <script src="js/main.js"></script>
 </body>
 </html>
