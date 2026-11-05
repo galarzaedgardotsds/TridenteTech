@@ -14,7 +14,7 @@ Sitio web oficial y portafolio del equipo **TridenteTech**, desarrollado como pr
 
 ## 🎯 Sprint Goal
 
-> Crear y publicar la primera versión de la página web de nuestra consultora IT TridenteTech aplicando los conocimientos adquiridos en el curso (PSeInt y Lenguaje C) junto con asistencia autorizada de Inteligencia Artificial, donde se presente al equipo, se detallen nuestros servicios y se alojen nuestros proyectos actuales y futuros como portafolio grupal con un medio de contacto funcional.
+> Crear y publicar la primera versión de la página web de nuestra consultora IT TridenteTech aplicando los conocimientos de lógica y programación en Lenguaje C adquiridos en el curso junto con asistencia autorizada de Inteligencia Artificial, donde se presente al equipo, se detallen nuestros servicios y se alojen nuestros proyectos actuales y futuros como portafolio grupal con un medio de contacto funcional.
 
 ---
 
@@ -38,7 +38,7 @@ Sitio web oficial y portafolio del equipo **TridenteTech**, desarrollado como pr
 - Reemplazamos los emojis convencionales por **iconos vectoriales SVG** nítidos que se renderizan igual en cualquier dispositivo.
 
 ### 4. Presentación del Equipo con Fotografías
-- Agregamos la sección del equipo con tarjetas individuales para Edgar, Agustin y Luciano, detallando sus roles y tecnologías.
+- Agregamos la sección del equipo con tarjetas individuales, detallando sus roles y tecnologías.
 - Incorporamos las **fotos de perfil reales** de cada integrante en formato circular con borde celeste y encuadre centrado.
 
 ### 5. Servicios de la Consultora IT
