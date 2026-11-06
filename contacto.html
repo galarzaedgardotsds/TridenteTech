@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="page-contacto">
+    <a class="skip-link" href="#contacto">Saltar al formulario</a>
 
     <!-- 1. Encabezado y Navegación -->
     <header>
@@ -22,12 +23,16 @@
                 </svg>
                 <span>TridenteTech</span>
             </a>
-            <ul>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Abrir menú de navegación">
+                <span></span><span></span><span></span>
+            </button>
+            <ul id="main-menu">
                 <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
                 <li><a href="index.html#equipo" class="nav-link">Equipo</a></li>
                 <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
                 <li><a href="index.html#proyectos" class="nav-link">Proyectos</a></li>
-                <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
+                <li><a href="contacto.html" class="nav-btn active">Contacto</a></li>
+                <li><button class="theme-toggle" type="button" aria-label="Cambiar tema" title="Cambiar tema">☀</button></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +43,7 @@
             <h2>Ponte en Contacto con TridenteTech</h2>
             <p>¿Tienes dudas sobre nuestros proyectos del curso o comentarios para el equipo? Envíanos un mensaje.</p>
             
-            <form class="contact-form" action="https://formspree.io/f/xljgnrnn" method="POST">
+            <form class="contact-form" action="https://formspree.io/f/xljgnrnn" method="POST" novalidate>
                 <div class="form-group">
                     <label for="nombre">Nombre completo</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ej. Profesor / Compañero" required>
@@ -60,6 +65,7 @@
                 </div>
 
                 <button type="submit" class="btn">Enviar Mensaje</button>
+                <p class="form-status" role="status" aria-live="polite"></p>
             </form>
         </section>
     </main>
