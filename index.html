@@ -3,295 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TridenteTech - Consultora IT y desarrollo de software por Edgar Galarza, Agustin Sattler y Luciano Ifran. Soluciones web, PWA y lógica de software con IA.">
-    <title>TridenteTech | Consultora IT & Desarrollo de Software</title>
-    <!-- Favicon en formato SVG -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='12 2 15 8 9 8 12 2'/%3E%3Cpath d='M6 6l2 6h8l2-6'/%3E%3Cpath d='M12 14v8'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Edgar Galarza | Software Developer</title>
+    <meta name="description" content="Portafolio de Edgar Galarza, estudiante de Desarrollo de Software. Proyectos web, PWA y desarrollo frontend desde Argentina.">
+    <meta property="og:title" content="Edgar Galarza | Software Developer">
+    <meta property="og:description" content="Proyectos web, PWA y desarrollo frontend desde Argentina.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#090a0f">
+    <link rel="alternate" hreflang="en" href="index-en.html">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23090a0f'/%3E%3Cpath d='M18 16h15a12 12 0 0 1 0 24H18z' fill='none' stroke='%2338bdf8' stroke-width='5'/%3E%3Cpath d='M27 40h21' stroke='%23818cf8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+    <!-- Fuentes modernas: Space Grotesk para títulos y Plus Jakarta Sans para lectura -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Iconos de Lucide/Remix (vía CDN de Boxicons para ligereza) -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Luces de fondo ambientales con movimiento -->
+    <div class="ambient-light light-1"></div>
+    <div class="ambient-light light-2"></div>
+    <div class="grid-overlay"></div>
 
-    <!-- 1. Encabezado y Navegación -->
-    <header>
-        <nav>
-            <a href="#inicio" class="logo">
-                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <polygon points="12 2 15 8 9 8 12 2"/>
-                    <path d="M6 6l2 6h8l2-6"/>
-                    <path d="M12 14v8"/>
-                </svg>
-                <span>TridenteTech</span>
-            </a>
-            <ul>
-                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                <li><a href="#equipo" class="nav-link">Equipo</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+    <!-- Navegación flotante Glassmorphism -->
+    <header class="navbar-container">
+        <nav class="navbar">
+            <a href="#" class="logo">edgar<span>.dev</span></a>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#contacto" class="btn-nav">Contacto</a></li>
             </ul>
+            <div class="nav-actions">
+                <button class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="primary-navigation">
+                    <span aria-hidden="true">☰</span>
+                </button>
+                <a class="language-switch" href="index-en.html" lang="en" hreflang="en" aria-label="View this portfolio in English">EN</a>
+            </div>
         </nav>
     </header>
 
-    <!-- 2. Hero Section -->
-    <section id="inicio">
-        <span class="hero-subtitle-badge">Portafolio Académico de Desarrollo</span>
-        <h1>TridenteTech: Soluciones & Proyectos de Software</h1>
-        <p>
-            Somos un equipo de tres estudiantes de informática aplicando lógica algorítmica, programación estructurada y tecnologías modernas con asistencia de Inteligencia Artificial.
-        </p>
-        <div class="hero-actions">
-            <a href="#proyectos" class="btn">Explorar Proyectos</a>
-            <a href="#equipo" class="btn btn-secondary">Conocer al Equipo</a>
-        </div>
-    </section>
-
-    <!-- 3. Sección del Equipo (Los 3 Integrantes) -->
-    <section id="equipo" class="section-wrapper alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <span class="badge">Integrantes</span>
-                <h2>El Equipo TridenteTech</h2>
-                <p>
-                    Tres desarrolladores en formación uniendo fuerzas para resolver problemas reales mediante código limpio, trabajo colaborativo y organización constante.
-                </p>
+    <main class="container">
+        <!-- HERO SECTION -->
+        <section class="hero" id="sobre-mi">
+            <div class="status-badge">
+                <span class="pulse-dot"></span>
+                Disponible para nuevos proyectos
             </div>
+            
+            <h1 class="hero-title">
+                Construyendo software <span class="gradient-text">rápido, limpio</span> y con propósito.
+            </h1>
+            
+            <p class="hero-subtitle">
+                Hola, soy <strong>Edgar Galarza</strong>. Estudiante de Desarrollo de Software en Argentina. Me apasiona tanto la lógica de bajo nivel en C y la arquitectura de computadoras como crear experiencias web modernas e interactivas.
+            </p>
 
-            <div class="team-grid">
-                <!-- Integrante 1: Edgar Galarza -->
-                <div class="team-card">
-                    <img src="img/edgar.jpg" alt="Foto de Edgar Galarza" class="member-avatar">
-                    <h3>Edgar Galarza</h3>
-                    <div class="member-role">Product Owner & Frontend Dev</div>
-                    <p class="member-bio">
-                        Priorización de requerimientos del producto, coordinación del desarrollo web y maquetación accesible asistida por IA.
-                    </p>
-                    <div class="member-tags">
-                        <span class="tech-tag">Product Owner</span>
-                        <span class="tech-tag">HTML5 / CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Lenguaje C</span>
-                    </div>
-                </div>
-
-                <!-- Integrante 2: Agustin Sattler -->
-                <div class="team-card">
-                    <img src="img/agustin.jpg" alt="Foto de Agustin Sattler" class="member-avatar">
-                    <h3>Agustin Sattler</h3>
-                    <div class="member-role">Developer & Lógica Algorítmica</div>
-                    <p class="member-bio">
-                        Análisis de requerimientos de software, modelado de flujos y desarrollo de la base algorítmica para proyectos y servicios.
-                    </p>
-                    <div class="member-tags">
-                        <span class="tech-tag">Developer</span>
-                        <span class="tech-tag">Lógica en C</span>
-                        <span class="tech-tag">Algoritmos</span>
-                        <span class="tech-tag">Estructuras</span>
-                    </div>
-                </div>
-
-                <!-- Integrante 3: Luciano Ifran -->
-                <div class="team-card">
-                    <img src="img/luciano.jpg" alt="Foto de Luciano Ifran" class="member-avatar">
-                    <h3>Luciano Ifran</h3>
-                    <div class="member-role">Scrum Master & QA Developer</div>
-                    <p class="member-bio">
-                        Facilitación del flujo de trabajo ágil en Trello, detección de impedimentos y control de calidad en responsive y formularios.
-                    </p>
-                    <div class="member-tags">
-                        <span class="tech-tag">Scrum Master</span>
-                        <span class="tech-tag">Trello / Scrum</span>
-                        <span class="tech-tag">Testing / QA</span>
-                        <span class="tech-tag">Lenguaje C</span>
-                    </div>
-                </div>
+            <div class="hero-cta">
+                <a href="#proyectos" class="btn btn-primary">
+                    Ver proyectos <i class='bx bx-right-arrow-alt'></i>
+                </a>
+                <a href="https://github.com/galarzaedgardotsds" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class='bx bxl-github'></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/edgardo-galarza-127718449/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class='bx bxl-linkedin'></i> LinkedIn
+                </a>
+                <a href="assets/cv-edgardo-galarza-es.pdf" download class="btn btn-secondary">
+                    <i class='bx bx-download'></i> Descargar CV
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 4. Servicios de la Consultora IT -->
-    <section id="servicios" class="section-wrapper">
-        <div class="container">
-            <div class="section-header">
-                <span class="badge">Nuestras Soluciones</span>
-                <h2>Servicios de Consultoría IT</h2>
-                <p>
-                    Ofrecemos soluciones digitales adaptadas a las necesidades reales de instituciones, emprendedores y organizaciones que buscan modernizar sus procesos.
-                </p>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon-box" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                            <line x1="8" y1="21" x2="16" y2="21"/>
-                            <line x1="12" y1="17" x2="12" y2="21"/>
-                        </svg>
+        <!-- BENTO GRID: SOBRE MÍ Y STACK (Estilo Codernauta) -->
+        <section class="bento-section" id="stack">
+            <h2 class="section-title"><i class='bx bx-terminal'></i> Mi Ecosistema</h2>
+            
+            <div class="bento-grid">
+                <!-- Caja 1: Perfil técnico -->
+                <div class="bento-card span-2 spotlight">
+                    <div class="card-content">
+                        <span class="card-tag">Enfoque</span>
+                        <h3>Del bajo nivel al Frontend</h3>
+                        <p>Entender cómo funciona el hardware, los procesadores y la memoria en C me permite escribir código web mucho más optimizado y estructurado.</p>
                     </div>
-                    <h3>Desarrollo Web & Portales</h3>
-                    <p>Diseño y construcción de sitios web responsivos, institucionales y landing pages orientadas a potenciar la visibilidad y accesibilidad digital.</p>
-                    <div class="member-tags" style="margin-top: 1rem; justify-content: flex-start;">
-                        <span class="tech-tag">Destinatarios: Pymes y Comercios</span>
-                    </div>
+                    <div class="card-bg-icon"><i class='bx bx-microchip'></i></div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon-box" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
-                            <path d="m9 14 2 2 4-4"/>
-                        </svg>
+                <!-- Caja 2: Ubicación -->
+                <div class="bento-card spotlight">
+                    <div class="card-content">
+                        <span class="card-tag">Ubicación</span>
+                        <h3>Argentina 🇦🇷</h3>
+                        <p>Desarrollando desde Corrientes para el mundo.</p>
                     </div>
-                    <h3>Software & Gestión a Medida</h3>
-                    <p>Desarrollo de aplicaciones y módulos para automatizar el seguimiento de tareas, control de flujos de trabajo e inventarios internos.</p>
-                    <div class="member-tags" style="margin-top: 1rem; justify-content: flex-start;">
-                        <span class="tech-tag">Destinatarios: Institutos y Equipos</span>
-                    </div>
+                    <div class="card-bg-icon"><i class='bx bx-world'></i></div>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon-box" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                            <circle cx="12" cy="12" r="4"/>
-                        </svg>
+                <!-- Caja 3: Tech Stack con Cinta Infinita (Marquee) -->
+                <div class="bento-card span-3 spotlight marquee-card">
+                    <div class="card-content">
+                        <span class="card-tag">Herramientas & Tecnologías</span>
+                        <h3>Mi Stack Diario</h3>
                     </div>
-                    <h3>Consultoría en Asistencia con IA</h3>
-                    <p>Asesoramiento e integración de flujos modernos con Inteligencia Artificial para acelerar la productividad, documentación y prototipado.</p>
-                    <div class="member-tags" style="margin-top: 1rem; justify-content: flex-start;">
-                        <span class="tech-tag">Destinatarios: Emprendimientos</span>
+                    <div class="marquee-wrapper">
+                        <div class="marquee-track">
+                            <span class="tech-pill"><i class='bx bxl-html5'></i> HTML5</span>
+                            <span class="tech-pill"><i class='bx bxl-css3'></i> CSS3</span>
+                            <span class="tech-pill"><i class='bx bxl-javascript'></i> JavaScript</span>
+                            <span class="tech-pill"><i class='bx bx-code-curly'></i> Lenguaje C</span>
+                            <span class="tech-pill"><i class='bx bxl-git'></i> Git & GitHub</span>
+                            <span class="tech-pill"><i class='bx bxl-visual-studio'></i> VS Code</span>
+                            <span class="tech-pill"><i class='bx bx-server'></i> Arquitectura PC</span>
+                            <!-- Duplicado para efecto infinito fluido -->
+                            <span class="tech-pill"><i class='bx bxl-html5'></i> HTML5</span>
+                            <span class="tech-pill"><i class='bx bxl-css3'></i> CSS3</span>
+                            <span class="tech-pill"><i class='bx bxl-javascript'></i> JavaScript</span>
+                            <span class="tech-pill"><i class='bx bx-code-curly'></i> Lenguaje C</span>
+                            <span class="tech-pill"><i class='bx bxl-git'></i> Git & GitHub</span>
+                            <span class="tech-pill"><i class='bx bxl-visual-studio'></i> VS Code</span>
+                            <span class="tech-pill"><i class='bx bx-server'></i> Arquitectura PC</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Barra de Stack Tecnológico -->
-            <div class="tech-stack-strip">
-                <span class="tech-strip-label">Tecnologías & Herramientas:</span>
-                <div class="tech-strip-badges">
-                    <span class="tech-strip-pill">HTML5 Semántico</span>
-                    <span class="tech-strip-pill">CSS3 / Grid & Flexbox</span>
-                    <span class="tech-strip-pill">JavaScript ES6+</span>
-                    <span class="tech-strip-pill">PWA / Service Workers</span>
-                    <span class="tech-strip-pill">Lenguaje C</span>
-                    <span class="tech-strip-pill">Algoritmos & Estructuras</span>
-                    <span class="tech-strip-pill">Git & GitHub</span>
-                    <span class="tech-strip-pill">Herramientas IA</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Portafolio de Proyectos -->
-    <section id="proyectos" class="section-wrapper alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <span class="badge">Portafolio</span>
-                <h2>Nuestros Proyectos</h2>
-                <p>
-                    Muestra de desarrollos y proyectos simulados creados como práctica profesional para la materia, resolviendo casos de uso del ámbito IT e institucional.
-                </p>
-            </div>
+        <!-- SECCIÓN DE PROYECTOS -->
+        <section class="projects-section" id="proyectos">
+            <h2 class="section-title"><i class='bx bx-code-alt'></i> Proyectos Destacados</h2>
 
             <div class="projects-grid">
-                <!-- Proyecto 1: Web Portafolio -->
-                <div class="project-card">
-                    <div class="project-top">
-                        <div class="project-header-row">
-                            <div class="project-icon-box" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <line x1="2" y1="12" x2="22" y2="12"/>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                                </svg>
+                <!-- Proyecto 1 -->
+                <article class="project-card spotlight">
+                    <a class="project-preview" href="https://galarzaedgardotsds.github.io/AppGastos/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de Tracker de Gastos Personales">
+                        <img src="assets/app-gastos-preview.png" alt="Vista previa de la aplicación Tracker de Gastos Personales" loading="lazy">
+                    </a>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-type">PWA / Web App</span>
+                            <div class="project-links">
+                                <a href="https://github.com/galarzaedgardotsds/AppGastos" target="_blank" rel="noopener noreferrer" title="Ver código de AppGastos" aria-label="Ver código de AppGastos"><i class='bx bxl-github'></i></a>
+                                <a href="https://galarzaedgardotsds.github.io/AppGastos/" target="_blank" rel="noopener noreferrer" title="Ver demo" aria-label="Ver demo de AppGastos"><i class='bx bx-link-external'></i></a>
                             </div>
-                            <span class="status-badge status-done">Completado</span>
                         </div>
-                        <h3>01. Website Consultora TridenteTech</h3>
-                        <p>
-                            Sitio web corporativo de la consultora IT con presentación de equipo, catálogo de servicios, diseño adaptativo y formulario de contacto interactivo.
+                        <h3 class="project-title">Tracker de Gastos Personales</h3>
+                        <p class="project-desc">
+                            Aplicación Web Progresiva (PWA) instalable para el control de finanzas diarias, con almacenamiento local, interfaz dark mode fluida y métricas claras.
                         </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">HTML5 Semántico</span>
-                            <span class="tech-tag">CSS3 Moderno</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Formspree</span>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>PWA</span>
                         </div>
                     </div>
-                    <div class="project-footer">
-                        <a href="#inicio" class="btn btn-secondary">Estás Aquí</a>
-                    </div>
-                </div>
+                </article>
 
-                <!-- Proyecto 2: Edgar Finanzas PRO (PWA Piloto) -->
-                <div class="project-card">
-                    <div class="project-top">
-                        <div class="project-header-row">
-                            <div class="project-icon-box" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                    <line x1="2" y1="10" x2="22" y2="10"/>
-                                    <line x1="6" y1="15" x2="6.01" y2="15"/>
-                                    <line x1="10" y1="15" x2="14" y2="15"/>
-                                </svg>
+                <!-- Proyecto 2 -->
+                <article class="project-card spotlight">
+                    <a class="project-preview" href="https://galarzaedgardotsds.github.io/TridenteTech/" target="_blank" rel="noopener noreferrer" aria-label="Abrir demo de TridenteTech">
+                        <img src="assets/tridentetech-preview.png" alt="Vista previa del sitio web de TridenteTech" loading="lazy">
+                    </a>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-type">Web Grupal / Agencia</span>
+                            <div class="project-links">
+                                <a href="https://github.com/galarzaedgardotsds/TridenteTech" target="_blank" rel="noopener noreferrer" title="Ver código de TridenteTech" aria-label="Ver código de TridenteTech"><i class='bx bxl-github'></i></a>
+                                <a href="https://galarzaedgardotsds.github.io/TridenteTech/" target="_blank" rel="noopener noreferrer" title="Ver demo" aria-label="Ver demo de TridenteTech"><i class='bx bx-link-external'></i></a>
                             </div>
-                            <span class="status-badge status-done">Proyecto Piloto • PWA</span>
                         </div>
-                        <h3>02. Edgar Finanzas PRO 💎</h3>
-                        <p>
-                            Progressive Web App (PWA) de finanzas personales y grupales instalable en celular. Gestión de compras en cuotas, presupuestos, división de gastos con liquidación para WhatsApp, fotos de comprobantes, modo 100% offline y bloqueo por PIN.
+                        <h3 class="project-title">TridenteTech</h3>
+                        <p class="project-desc">
+                            Plataforma web de desarrollo de software colaborativo desplegada en producción, enfocada en rendimiento, diseño responsivo y presentación de servicios técnicos.
                         </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">PWA / Service Worker</span>
-                            <span class="tech-tag">JavaScript ES6+</span>
-                            <span class="tech-tag">Chart.js</span>
-                            <span class="tech-tag">Offline-First</span>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>JS</span>
+                            <span>Git</span>
+                            <span>GitHub Pages</span>
                         </div>
                     </div>
-                    <div class="project-footer" style="flex-wrap: wrap; gap: 0.6rem;">
-                        <a href="https://galarzaedgardotsds.github.io/AppGastos/" target="_blank" rel="noopener noreferrer" class="btn">🚀 Ver Demo Online</a>
-                        <a href="https://github.com/galarzaedgardotsds/AppGastos" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">💻 Ver Código</a>
-                    </div>
-                </div>
-
-                <!-- Proyecto 3: Organizador de Tareas (Próximo) -->
-                <div class="project-card">
-                    <div class="project-top">
-                        <div class="project-header-row">
-                            <div class="project-icon-box" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-                                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
-                                    <path d="m9 14 2 2 4-4"/>
-                                </svg>
-                            </div>
-                            <span class="status-badge status-next">En Planificación</span>
-                        </div>
-                        <h3>03. Organizador de Tareas Académicas</h3>
-                        <p>
-                            Sistema en etapa de planificación para estudiantes del instituto. Permitirá gestionar entregas de trabajos prácticos, exámenes y fechas límite con prioridades y lógica algorítmica.
-                        </p>
-                        <div class="project-tech-stack">
-                            <span class="tech-tag">Gestor Académico</span>
-                            <span class="tech-tag">Proyecto Simulado</span>
-                            <span class="tech-tag">Planificación</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="proyecto.html" class="btn">Ver Planificación</a>
-                    </div>
-                </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 6. Pie de Página -->
-    <footer>
-        <p><strong>TridenteTech</strong> &copy; 2026. Consultora IT desarrollada por Edgar Galarza, Agustin Sattler y Luciano Ifran.</p>
-        <p>Desarrollo de software con fundamentos en Lenguaje C, tecnologías web y herramientas modernas de IA.</p>
-    </footer>
+        <!-- FOOTER / CONTACTO -->
+        <footer class="footer" id="contacto">
+            <div class="footer-box spotlight">
+                <h2>¿Charlamos sobre código o proyectos?</h2>
+                <p>Siempre estoy abierto a colaborar en desarrollos web, proyectos académicos o nuevas oportunidades.</p>
+                <form class="contact-form" action="https://formspree.io/f/xljgnrnn" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde el portafolio personal de Edgar">
+                    <div class="contact-form-row">
+                        <div class="contact-field">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="contact-field">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="contact-field">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="¿En qué puedo ayudarte?" required>
+                    </div>
+                    <div class="contact-field">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class='bx bx-send'></i> Enviar mensaje
+                    </button>
+                    <p class="form-status" aria-live="polite"></p>
+                </form>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Edgar Galarza. Creado desde cero con mucho café y código limpio.</p>
+            </div>
+        </footer>
+    </main>
 
-    <!-- Script de interactividad -->
-    <script src="js/main.js"></script>
+    <!-- Script ligero para el efecto Spotlight que sigue al mouse en las tarjetas -->
+    <script>
+        document.querySelectorAll('.spotlight').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+            menuToggle.innerHTML = `<span aria-hidden="true">${isOpen ? '×' : '☰'}</span>`;
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('is-open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Abrir menú de navegación');
+                menuToggle.innerHTML = "<span aria-hidden='true'>☰</span>";
+            });
+        });
+
+        const contactForm = document.querySelector('.contact-form');
+        const formStatus = contactForm.querySelector('.form-status');
+
+        contactForm.addEventListener('submit', async event => {
+            event.preventDefault();
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            formStatus.textContent = 'Enviando mensaje...';
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { Accept: 'application/json' }
+                });
+
+                if (!response.ok) throw new Error('No se pudo enviar el formulario');
+                contactForm.reset();
+                formStatus.textContent = '¡Gracias! Tu mensaje fue enviado correctamente.';
+            } catch (error) {
+                formStatus.textContent = 'No se pudo enviar el mensaje. Probá nuevamente o contactame por LinkedIn.';
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>
