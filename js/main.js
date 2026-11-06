@@ -3,6 +3,37 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Tema persistente y respetuoso de la preferencia del sistema.
+    const themeToggle = document.querySelector('.theme-toggle');
+    const savedTheme = localStorage.getItem('tridentetech-theme');
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    const setTheme = (theme) => {
+        document.documentElement.dataset.theme = theme;
+        if (themeToggle) {
+            const isLight = theme === 'light';
+            themeToggle.textContent = isLight ? '☾' : '☀';
+            themeToggle.setAttribute('aria-label', isLight ? 'Activar tema oscuro' : 'Activar tema claro');
+        }
+    };
+    setTheme(savedTheme || (prefersLight ? 'light' : 'dark'));
+    themeToggle?.addEventListener('click', () => {
+        const nextTheme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+        setTheme(nextTheme);
+        localStorage.setItem('tridentetech-theme', nextTheme);
+    });
+
+    // Menú compacto para pantallas pequeñas.
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainMenu = document.querySelector('nav ul');
+    menuToggle?.addEventListener('click', () => {
+        const isOpen = mainMenu.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación');
+    });
+    mainMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
+        mainMenu.classList.remove('is-open');
+        menuToggle?.setAttribute('aria-expanded', 'false');
+    }));
     // 1. Scrollspy para resaltar la sección activa en el menú de index.html
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('header nav ul a');
@@ -35,11 +66,36 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Feedback visual al enviar el formulario de contacto
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
             const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const status = contactForm.querySelector('.form-status');
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
+            }
             if (submitBtn) {
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Enviando...';
+            }
+            status.className = 'form-status';
+            status.textContent = '';
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST', body: new FormData(contactForm), headers: { Accept: 'application/json' }
+                });
+                if (!response.ok) throw new Error('No se pudo enviar el formulario');
+                contactForm.reset();
+                status.classList.add('success');
+                status.textContent = '¡Mensaje enviado! El equipo te responderá pronto.';
+            } catch (error) {
+                status.classList.add('error');
+                status.textContent = 'No se pudo enviar el mensaje. Probá de nuevo en unos minutos.';
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Mensaje';
+                }
             }
         });
     }
